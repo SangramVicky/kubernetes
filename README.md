@@ -9,6 +9,9 @@
 		Route53
 		Autoscaling
 		etc..
+IN AWS go to IAM--roles--create role--select ec2--select ec2[again]--attach adminstrator access--add tags--provide role name.
+Now go to ec2 instance right click--instance setting--attach IAM--sangram_kops--apply
+
 ### 3. Install Kops on EC2
 ```sh
 curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
